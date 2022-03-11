@@ -1,1 +1,30 @@
-<p>main works!</p>
+<div class="wrapper">
+  <p class="title">
+    Insert your URL and get the shortened version provided by BitLy
+  </p>
+  <div class="input-wrapper">
+    <div class="input-text">
+      <input type="text" #input />
+      <p *ngIf="wrongUrlFormat">
+        Please make sure your URL has the right format!
+      </p>
+    </div>
+    <button
+      class="input-button"
+      (click)="handleShortenButtonClick(input.value)"
+    >
+      Shorten URL
+    </button>
+  </div>
+  <div class="output-wrapper">
+    <p *ngIf="shortenedUrl" id="shortenedUrl">{{ shortenedUrl }}</p>
+    <p *ngIf="error">{{ error }}</p>
+    <button
+      *ngIf="shortenedUrl"
+      class="copy-text"
+      (click)="handleCopyButtonClick()"
+    >
+      Copy URL
+    </button>
+  </div>
+</div>

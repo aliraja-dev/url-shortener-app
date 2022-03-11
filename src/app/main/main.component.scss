@@ -1,0 +1,97 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 16rem;
+  margin: 10rem 1rem 0;
+  font-size: 1.5rem;
+}
+
+.wrapper .title {
+  font-size: 2rem;
+}
+
+.wrapper p,
+.input-wrapper p {
+  text-align: center;
+  color: #e335e3;
+}
+
+.input-wrapper,
+.output-wrapper {
+  display: flex;
+  margin-top: 4rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.wrapper input,
+.wrapper button,
+.output-wrapper p {
+  font-size: 1.5rem;
+  padding: 10px;
+  border: 1px solid #e335e3;
+  border-radius: 4px;
+  color: #e335e3;
+}
+
+.input-wrapper .input-text {
+  margin-right: 2rem;
+}
+
+.input-wrapper input {
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-wrapper p {
+  padding: 0.5rem;
+  margin: 0 0 1.5rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: #fce9fc;
+  height: 100%;
+}
+
+.wrapper button:hover {
+  background-color: #e335e3;
+  color: white;
+}
+
+.output-wrapper p {
+  margin: 0 2rem 0 0;
+  border: none;
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    margin-top: 4rem;
+  }
+  .wrapper .title {
+    font-size: 1.75rem;
+  }
+  .input-wrapper {
+    margin-top: 2rem;
+  }
+  .input-wrapper,
+  .output-wrapper {
+    flex-direction: column;
+  }
+  .input-wrapper input,
+  .output-wrapper p {
+    margin: 0 0 1rem;
+  }
+  .input-wrapper .input-text {
+    margin: 0;
+  }
+  .output-wrapper {
+    margin-top: 2rem;
+  }
+  .output-wrapper .copy-text {
+    width: 100%;
+  }
+}
