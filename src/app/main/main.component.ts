@@ -38,15 +38,34 @@ export class MainComponent  {
     }
   }
 
-  public handleCopyButtonClick() {
-    const shortenedUrl = document.querySelector('#shortenedUrl');
-    const helperElement = document.createElement('textarea');
-    document.body.appendChild(helperElement);
-    helperElement.value = shortenedUrl!.textContent || '';
-    helperElement.select();
-    document.execCommand('copy');
-    document.body.removeChild(helperElement);
-    this.copied = true;
+  public CopyToClipboard() {
+
+    const urlToCopy = document.getElementById("shortenedUrl")!.textContent;
+
+    if (!navigator.clipboard){
+        // use old commandExec() way
+        const helperElement = document.createElement('textarea');
+        document.body.appendChild(helperElement);
+        helperElement.value = urlToCopy || '';
+        helperElement.select();
+        document.execCommand('copy');
+        document.body.removeChild(helperElement);
+        this.copied = true;
+    } else{
+        navigator.clipboard.writeText(urlToCopy!).then(
+            function(){
+                console.log("Copied using clipboard API"); // success
+            })
+          .catch(
+             function() {
+                console.log("Clipboard API not available"); // error
+          });
+    }
+
   }
 
 }
+
+
+// In this example, the text to copy would be in an element with id = textcopy
+

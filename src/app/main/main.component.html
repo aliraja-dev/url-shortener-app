@@ -19,11 +19,7 @@
   <div class="output-wrapper">
     <p *ngIf="shortenedUrl" id="shortenedUrl">{{ shortenedUrl }}</p>
     <p *ngIf="error">{{ error }}</p>
-    <button
-      *ngIf="shortenedUrl"
-      class="copy-text"
-      (click)="handleCopyButtonClick()"
-    >
+    <button *ngIf="shortenedUrl" class="copy-text" (click)="CopyToClipboard()">
       Copy URL
     </button>
   </div>
