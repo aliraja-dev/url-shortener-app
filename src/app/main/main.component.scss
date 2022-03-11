@@ -12,10 +12,18 @@
   font-size: 2rem;
 }
 
+.wrapper {
+  .proj-details {
+    font-size: 1rem;
+  }
+  .inspiration-details {
+    font-size: 1rem;
+  }
+}
 .wrapper p,
 .input-wrapper p {
   text-align: center;
-  color: #e335e3;
+  color: #042e84;
 }
 
 .input-wrapper,
@@ -31,13 +39,17 @@
 .output-wrapper p {
   font-size: 1.5rem;
   padding: 10px;
-  border: 1px solid #e335e3;
+  border: 2px solid #042e84;
   border-radius: 4px;
-  color: #e335e3;
+  color: #042e84;
 }
 
 .input-wrapper .input-text {
   margin-right: 2rem;
+  flex-grow: 9;
+}
+.input-wrapper .input-button {
+  flex-grow: 1;
 }
 
 .input-wrapper input {
@@ -53,12 +65,12 @@
 
 button {
   cursor: pointer;
-  background-color: #fce9fc;
+  background-color: #ffffff;
   height: 100%;
 }
 
 .wrapper button:hover {
-  background-color: #e335e3;
+  background-color: #042e84;
   color: white;
 }
 

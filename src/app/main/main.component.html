@@ -2,6 +2,17 @@
   <p class="title">
     Insert your URL and get the shortened version provided by BitLy
   </p>
+  <p class="proj-details">
+    This project is built using Angular 13 and Bitly API.
+    <a href="https://github.com/aliraja-dev/url-shortener-app"
+      >Github repo link</a
+    >
+  </p>
+  <p class="inspiration-details">
+    <a href="https://github.com/Lexie14/url-shortener-angular"
+      >Inspired by: Lexi14</a
+    >
+  </p>
   <div class="input-wrapper">
     <div class="input-text">
       <input type="text" #input />
@@ -17,6 +28,7 @@
     </button>
   </div>
   <div class="output-wrapper">
+    <p class="help-text" *ngIf="!shortenedUrl">Your short url will show here</p>
     <p *ngIf="shortenedUrl" id="shortenedUrl">{{ shortenedUrl }}</p>
     <p *ngIf="error">{{ error }}</p>
     <button *ngIf="shortenedUrl" class="copy-text" (click)="CopyToClipboard()">
