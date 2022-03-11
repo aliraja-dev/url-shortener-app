@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This app, returns short urls using the Bitly API service. In order to use the app, you would have to make a bitly dev account which is free and update the key in the environments.ts file. Otherwise, access denied error will be given by the app.
 
-![](images/homepage.jpg)
+![homepage](images/homepage.jpg)
 Entered Long Url
 ![homepage](images/longUrl.jpg)
 Shortened Url Result
