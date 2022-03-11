@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   bitly_url: 'https://api-ssl.bitly.com/v4/shorten',
-  bitly_access_token: '19eef2657567cfa40d3b4c8406579ebeacb2801b'
+  bitly_access_token: 'ADD YOUR OWN ACCESS TOKEN HERE'
 };
 
 /*
